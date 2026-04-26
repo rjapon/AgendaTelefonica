@@ -65,7 +65,6 @@ public class Telefono {
         resultado += "Numero de telefono: " + numero + "\n";
         resultado += "Tipo de telefono: " + tipo + "\n";
         resultado += "Persona: " + unaPersona + "\n";
-        resultado += "Operadora: " + unaOperadora;
         
         return resultado;
     }

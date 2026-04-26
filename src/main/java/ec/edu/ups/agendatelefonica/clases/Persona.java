@@ -49,7 +49,7 @@ public class Persona {
     
     @Override
     public String toString() {
-        return "Persona{" + "cedula=" + cedula + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + '}';
+        return "\ncedula=" + cedula + "\nnombre=" + nombre ;
     }    
     
 }

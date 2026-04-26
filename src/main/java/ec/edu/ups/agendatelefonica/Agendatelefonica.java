@@ -32,7 +32,7 @@ public class Agendatelefonica {
                     String continuar1;
 
                     do {
-                        System.out.println("\n--- Registrar contacto ---");
+                        System.out.println("\nRegistrar contacto");
 
                         System.out.print("Ingrese el numero de telefono: ");
                         int numeroTelefono = entrada.nextInt();
@@ -46,37 +46,15 @@ public class Agendatelefonica {
                         System.out.print("Ingrese el nombre de la persona: ");
                         String nombrePersona = entrada.next();
 
-                        System.out.print("Ingrese el anio de nacimiento: ");
-                        int anio = entrada.nextInt();
-
-                        System.out.print("Ingrese el mes de nacimiento: ");
-                        int mes = entrada.nextInt();
-
-                        System.out.print("Ingrese el dia de nacimiento: ");
-                        int dia = entrada.nextInt();
-
-                        Date fechaNacimiento = new Date(anio - 1900, mes - 1, dia);
 
                         Persona persona = new Persona();
                         persona.setCedula(cedula);
                         persona.setNombre(nombrePersona);
-                        persona.setFechaNacimiento(fechaNacimiento);
-
-                        System.out.print("Ingrese el codigo de la operadora: ");
-                        int codigoOperadora = entrada.nextInt();
-
-                        System.out.print("Ingrese el nombre de la operadora: ");
-                        String nombreOperadora = entrada.next();
-
-                        OperadoraTelefonica operadora = new OperadoraTelefonica();
-                        operadora.setCodigo(codigoOperadora);
-                        operadora.setNombre(nombreOperadora);
 
                         Telefono telefono = new Telefono();
                         telefono.setNumero(numeroTelefono);
                         telefono.setTipo(tipoTelefono);
                         telefono.setUnaPersona(persona);
-                        telefono.setUnaOperadora(operadora);
 
                         contactos.add(telefono);
 
