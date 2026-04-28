@@ -5,11 +5,11 @@ import java.util.Date;
  * @author Asus
  */
 public class Persona {
-    private String cedula;
+    private int cedula;
     private String nombre;
     private Date fechaNacimiento;
 
-    public Persona(String cedula, String nombre, Date fechaNacimiento) {
+    public Persona(int cedula, String nombre, Date fechaNacimiento) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
@@ -18,11 +18,11 @@ public class Persona {
     public Persona() {
     }
 
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
+    public void setCedula(int cedula) {
         this.cedula = cedula;
     }
 

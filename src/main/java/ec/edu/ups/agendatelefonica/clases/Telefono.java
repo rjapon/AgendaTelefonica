@@ -67,6 +67,21 @@ public class Telefono {
         resultado += "Persona: " + unaPersona + "\n";
         
         return resultado;
+        
+        
+    }
+
+    public Telefono(int numero, String tipo) {
+        this.numero = numero;
+        this.tipo = tipo;
+    }
+
+    public String getCedula() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void setunaPersona(Telefono personaE) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

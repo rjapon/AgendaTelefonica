@@ -15,14 +15,15 @@ public class Agendatelefonica {
 
         ArrayList<Telefono> contactos = new ArrayList<>();
         ArrayList<OperadoraTelefonica> operadoras = new ArrayList<>();
-
+        
         int selec;
 
         do {
             System.out.println("\n--Menu--");
-            System.out.println("1. Ingresar contactos");
-            System.out.println("2. Ingresar operadoras");
-            System.out.println("3. Salir");
+            System.out.println("1. Registrar contactos");
+            System.out.println("2. Registrar operadoras");
+            System.out.println("3. Registrar telefono");
+            System.out.println("4. Salir");
             System.out.print("Seleccione una opcion: ");
             selec = entrada.nextInt();
 
@@ -41,7 +42,7 @@ public class Agendatelefonica {
                         String tipoTelefono = entrada.next();
 
                         System.out.print("Ingrese la cedula de la persona: ");
-                        String cedula = entrada.next();
+                        int cedula = entrada.nextInt();
 
                         System.out.print("Ingrese el nombre de la persona: ");
                         String nombrePersona = entrada.next();
@@ -95,8 +96,41 @@ public class Agendatelefonica {
                     } while (continuar2.equalsIgnoreCase("S"));
 
                     break;
-
+                
                 case 3:
+                    System.out.println("\n--- Registrar telefono ---");
+                    
+                    System.out.println("Ingrese el numero de telefono: ");
+                    int numero = entrada.nextInt();
+                    
+                    System.out.println("Ingrese el tipo de telefono: ");
+                    String tipo = entrada.next();
+                    
+                    Telefono telefono = new Telefono(numero, tipo);
+                    
+                    //Buscar persona en la lista de personas
+                    String cedulaB = entrada.next();
+                    
+                    for (Telefono personaE : contactos){
+                        if(personaE.getCedula()== cedulaB){
+                            telefono.setunaPersona(personaE);
+                            break;
+                        }
+                    }
+                    
+                    System.out.println("Ingrese el codigo de la operadora: ");
+                    int codigoB = entrada.nextInt();
+                    
+                    for (OperadoraTelefonica operadoraE : operadoras){
+                        if (operadoraE.getCodigo() == codigoB){
+                            telefono.setUnaOperadora(operadoraE);
+                            break;
+                        }
+                    }
+                    
+                    break;
+                   
+                case 4:
                     System.out.println("Salir");
                     break;
 
